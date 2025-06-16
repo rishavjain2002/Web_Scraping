@@ -1,3 +1,4 @@
+import json
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
@@ -18,7 +19,6 @@ script = f"""
 """
 data_json = driver.execute_script(script)
 
-import json
 data = json.loads(data_json)
 print(data)
 
